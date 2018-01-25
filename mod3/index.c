@@ -38,7 +38,7 @@ int main()
     printf("Hello %s %s\n", fname, lname);
     //To access individual members of an array you use index notation,
     //   char[index position]
-    printf("Your initials are [%c%c]\n", fname[0,2], lname[0]);
+    printf("Your initials are [%c%c]\n", fname[0], lname[0]);
 
 
     return 0;
