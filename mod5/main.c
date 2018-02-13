@@ -52,6 +52,7 @@ int main(void)
 
     printf("Enter arrow head width:\n");
     scanf("%d", &arrowHeadWidth);
+    printf("\n");
 
     while(arrowHeadWidth <= arrowBaseWidth)
     {
