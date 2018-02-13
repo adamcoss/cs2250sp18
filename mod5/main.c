@@ -52,13 +52,13 @@ int main(void)
 
     printf("Enter arrow head width:\n");
     scanf("%d", &arrowHeadWidth);
-    printf("\n");
 
     while(arrowHeadWidth <= arrowBaseWidth)
     {
         printf("Enter arrow head width:\n");
         scanf("%d", &arrowHeadWidth);
     }
+    printf("\n");
     for(i = 0; i < arrowBaseHeight; i++)
     {
         for(j = 0; j < arrowBaseWidth; j++)
