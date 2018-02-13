@@ -55,7 +55,6 @@ int main(void)
 
     while(arrowHeadWidth <= arrowBaseWidth)
     {
-        printf("Arrow head width must be larger than base,:\n");
         printf("Enter arrow head width:\n");
         scanf("%d", &arrowHeadWidth);
     }
@@ -63,7 +62,7 @@ int main(void)
     {
         for(j = 0; j < arrowBaseWidth; j++)
         {
-            printf("%c ", arrowChar);
+            printf("%c", arrowChar);
         }
         printf("\n");
     }
@@ -71,7 +70,7 @@ int main(void)
     {
         for(j = 0; j < arrowHeadWidth; j++)
         {
-            printf("%c ", arrowChar);
+            printf("%c", arrowChar);
         }
         printf("\n");
     }
