@@ -36,7 +36,7 @@ int main()
     // TASK: When done, ask "Do you want to play again"
     // 'y' will repeat.
     // 'n' will quit.
-    while(ans != 'n')
+    do
     {
         // 1) Create a rand num 0-20
         guess = rand()% NUM;
@@ -75,9 +75,10 @@ int main()
             printf(" [ %d ] \n", input[i]);
         }
         printf("Do you want to play again?\n");
-        scanf(" %c\n", &ans);// remember to take the ENTER key into consideration
+        scanf(" %c", &ans);// remember to take the ENTER key into consideration
         opp = 0; // reset values
     }       // end of while loop ans != 'n'
+    while(ans != 'n');
     printf("Thanks for playing\n");
 
     return 0;
