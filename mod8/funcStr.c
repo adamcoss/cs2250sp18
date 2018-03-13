@@ -16,38 +16,28 @@
  * =====================================================================================
  */
 #include <stdio.h>
-#include <string.h>
-
-// Constants
+#include <string.h>     // <> used for system library
+#include "superlib.h"   // "" used for local file
+//#ifndef __SUPERLIB_H__
+//#define __SUPERLIB_H__
+// Main Function
 const int INPUT_STR_SIZE = 50;
 // Function Prototypes
 void StrSpaceToHyphen(char modString[], char separator);
-// Main Function
+int StrCountDigits(char modString[]);
 int main()
 {
-    char userStr[INPUT_STR_SIZE];
+    char userStr[INPUT_STR_SIZE];       // Needs superlib.h included for CONST
 
     printf("Enter string with spaces: \n");
     fgets(userStr, INPUT_STR_SIZE, stdin);
 
     StrSpaceToHyphen(userStr, ':');
-
+    
     printf("String with Hyphens: %s\n", userStr);
+    printf("Number of digitis: %d\n", StrCountDigits(userStr));
 
     return 0;
-}
-// Function Definitions
-void StrSpaceToHyphen(char modString[], char separator)
-{
-    int i = 0;
-    for (i = 0; i < strlen(modString); ++i)
-    {
-        if(modString[i] == ' ')
-        {
-            modString[i] = separator;
-        }
-    }
-    return;
 }
 
 
