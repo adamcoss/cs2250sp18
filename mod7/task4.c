@@ -27,7 +27,7 @@ const int DIM = 2;
 //
 //  PASS BY VALUE: void InitPoint(int x, int y);
 //  Takes a copy of integer without address
-void InitPoint(int *xa, int *ya); //PASS BY REFERENCE: Takes the address to
+void InitPoint(int *point, int *ya); //PASS BY REFERENCE: Takes the address to
                                 // update outside of the function
 // 2) Display current point position.
 void ShowPoint(int x, int y);
