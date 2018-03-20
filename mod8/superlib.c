@@ -19,7 +19,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <ctype.h>
-#include "superlib.h" //HEADER FILE MUST BE INCLUDED TO JOIN THEM:w
+#include "superlib.h" //HEADER FILE MUST BE INCLUDED TO JOIN THEM
 
 // Function Definitions
 void StrSpaceToHyphen(char modString[], char separator)
@@ -42,10 +42,10 @@ int StrCountDigits(char modString[])
     for (i = 0; i < strlen(modString); ++i)
     {
         if(isdigit(modString[i]))
-                {
-                total = total + 1;
-                }
-                }
+        {
+            total = total + 1;
+        }
+    }
 
-                return total;
-                }
+    return total;
+}

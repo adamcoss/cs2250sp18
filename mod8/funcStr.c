@@ -21,7 +21,6 @@
 //#ifndef __SUPERLIB_H__
 //#define __SUPERLIB_H__
 // Main Function
-const int INPUT_STR_SIZE = 50;
 // Function Prototypes
 void StrSpaceToHyphen(char modString[], char separator);
 int StrCountDigits(char modString[]);
