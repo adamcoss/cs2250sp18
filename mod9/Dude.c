@@ -64,4 +64,21 @@ void InitInfoStruct(SuperDude* sd)  // The '.' operator does not work when passi
                                     // Can also use (*sd).sex to dereference.
     return;
 }
+ 
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  CopyInfoStruct
+ *  Description:  Makes a copy and returns a SuperDude struct
+ * =====================================================================================
+ */
+SuperDude CopyInfoStruct(const SuperDude* sd)
+{
+    SuperDude tmp;                  // Assigns tmp var to SuperDude type.
+    tmp.age = sd->age;
+    tmp.weight = sd->weight;
+    tmp.sex = sd->sex;
+    //tmp is a structure so uses the '.' operator.
+    //sd uses -> because it is an address.
 
+    return tmp;                     // Return tmp (same type as SuperDude)
+}

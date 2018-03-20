@@ -39,6 +39,7 @@ void ShowInfoStruct(const SuperDude* sd);
 // ^^^ Pass a constant address so it cannot be changed. Is READ ONLY.
 void InitInfoStruct(SuperDude* sd); // Pass by reference so it is available in
                                     // the other files.
+SuperDude CopyInfoStruct(const SuperDude* sd);
 void ShowInfo(int age, double weight);
 #endif /* ----- #ifndef DUDE__INC__ ----- */
 

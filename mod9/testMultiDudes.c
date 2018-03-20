@@ -25,10 +25,12 @@
 // Main Function
 int main()
 {
-    SuperDude s1;
+    SuperDude s1, s2;
     // Use '&' to assign to an address
     InitInfoStruct(&s1);
     ShowInfoStruct(&s1);
+    s2 = CopyInfoStruct(&s1);
+    ShowInfoStruct(&s2);
 
     return 0;
 }
