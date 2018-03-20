@@ -38,12 +38,30 @@ void ShowInfo(int age, double weight)
  *  Description:  Displays SuperDude information
  * =====================================================================================
  */
-void ShowInfoStruct(SuperDude sd)
+void ShowInfoStruct(const SuperDude* sd) // "sd" is an address of a structure,
+                                         // NOT a structure itself. Must use ->
+                                         // operator in following statements.
 {
-    printf("Your age is %d\n", sd.age);
-    printf("Your weight is %.2lf\n", sd.weight);
-    printf("Your sex is %c\n", sd.sex);
+    printf("Your age is %d\n", sd->age);
+    printf("Your weight is %.2lf\n", sd->weight);
+    printf("Your sex is %c\n", sd->sex);
     return;
 }
-
+ 
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  InitInfoStruct
+ *  Description:  Initializes values of SuperDude struct
+ * =====================================================================================
+ */
+void InitInfoStruct(SuperDude* sd)  // The '.' operator does not work when passing
+                                    // by value.
+{
+    sd->age = -99;
+    sd->weight = -99;
+    sd->sex = 'N';                  // Use "->" operator to access struct member
+                                    // instead of the '.' operator
+                                    // Can also use (*sd).sex to dereference.
+    return;
+}
 

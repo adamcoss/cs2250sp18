@@ -35,9 +35,10 @@ typedef struct SuperDude        // "typedef" creates a new definition to use
 }SuperDude;                              // Must include struct name before 
                                          // the ';'
 // Function Prototypes
-void ShowInfoStruct(SuperDude sd); // Struct definitions must be defined above
-                                // function prototypes.
-
+void ShowInfoStruct(const SuperDude* sd);
+// ^^^ Pass a constant address so it cannot be changed. Is READ ONLY.
+void InitInfoStruct(SuperDude* sd); // Pass by reference so it is available in
+                                    // the other files.
 void ShowInfo(int age, double weight);
 #endif /* ----- #ifndef DUDE__INC__ ----- */
 
