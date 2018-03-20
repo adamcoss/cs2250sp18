@@ -23,15 +23,19 @@
 const int STRSIZE = 128;
 // Function Prototypes
 void GetOutputWithoutWhitespace(char phrase[]);
-void GetNumOfCharacters();
+int GetNumOfCharacters(char phrase[]);
 
 // Main Function
 int main()
 {
     char phrase[STRSIZE];
-    GetNumOfCharacters();
-    GetOutputWithoutWhitespace(phrase);
+   // GetOutputWithoutWhitespace(phrase);
 
+    printf("Enter a sentence or phrase:\n");
+    fgets(phrase, STRSIZE, stdin);
+    printf("You entered: %s\n", phrase);
+    printf("Number of Characters: %d\n", GetNumOfCharacters(phrase));
+    GetOutputWithoutWhitespace(phrase);
     return 0;
 }
 // Function Definitions
@@ -39,14 +43,10 @@ int main()
 // FUNC:
 // Gets number of characters.
 
-void GetNumOfCharacters()
+int GetNumOfCharacters(char phrase[])
 {
     int count = 0;
-    char phrase[STRSIZE];
 
-    printf("Enter a sentence or phrase:\n");
-    fgets(phrase, STRSIZE, stdin);
-    printf("You entered: %s\n", phrase);
     for (int i = 0; i < strlen(phrase); i++)
     {
         if (isalnum(phrase[i]))
@@ -54,13 +54,27 @@ void GetNumOfCharacters()
             count = count + 1;
         }
     }
-    printf("Number of Characters: %d\n", count);
-    return;
+    return count;
 }
 // FUNC:
 // Gets output with no spaces
 void GetOutputWithoutWhitespace(char phrase[])
 {
+    char newStr[strlen(phrase)];
+    for (int i = 0; i < strlen(phrase); i++)
+    {
+        if (phrase[i] == ' ')
+        {
+            for (int j = i; j < strlen(phrase); j++)
+            {
+                newStr[i] = phrase[i + 1];
+            }
+                newStr[i] = phrase[i];
+        }
+    }
+
+    printf("Without spaces: [%s]\n", newStr);
+
 
     return;
 }
