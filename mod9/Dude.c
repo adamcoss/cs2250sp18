@@ -82,3 +82,34 @@ SuperDude CopyInfoStruct(const SuperDude* sd)
 
     return tmp;                     // Return tmp (same type as SuperDude)
 }
+ 
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  UpdateInfoStruct
+ *  Description:  update values (int, doubles) of struct by some weight
+ * =====================================================================================
+ */
+void UpdateInfoStruct(SuperDude* sd, int myweight)
+{
+    // 
+    sd->age *= myweight;
+    sd->weight = sd->weight * myweight;
+        return;
+}
+ 
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  ShowInfoAllStruct
+ *  Description:  Display array of structure
+ * =====================================================================================
+ */
+void ShowInfoAllStruct(const SuperDude sd[]) // same as: const int array[]
+{
+    for(int i = 0 ; i < ASIZE; i++)
+    {
+        printf("[%d] Member info [%d] [%lf] [%c]\n", i, sd[i].age,
+                sd[i].weight, sd[i].sex);
+    }
+    return;
+}
+

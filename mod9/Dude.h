@@ -18,7 +18,6 @@
 #ifndef  DUDE__INC__
 #define  DUDE_INC__
 
-// Constants
 
 struct Dude                     // Creates structure of data of different types
 {
@@ -34,6 +33,10 @@ typedef struct SuperDude        // "typedef" creates a new definition to use
     char sex;
 }SuperDude;                              // Must include struct name before 
                                          // the ';'
+// Constants
+//#define ASIZE 3   // same as static const int ASIZE 3
+static const int ASIZE = 3;
+
 // Function Prototypes
 void ShowInfoStruct(const SuperDude* sd);
 // ^^^ Pass a constant address so it cannot be changed. Is READ ONLY.
@@ -41,5 +44,8 @@ void InitInfoStruct(SuperDude* sd); // Pass by reference so it is available in
                                     // the other files.
 SuperDude CopyInfoStruct(const SuperDude* sd);
 void ShowInfo(int age, double weight);
+void UpdateInfoStruct(SuperDude* sd, int myweight);
+void ShowInfoAllStruct(const SuperDude sd[]); // Arrays don't need '*' because
+                                              // it is an address already.
 #endif /* ----- #ifndef DUDE__INC__ ----- */
 
