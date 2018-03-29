@@ -14,23 +14,21 @@
  *   Organization:  WSU
  *
  * =====================================================================================
- * */
+ */
 
 #include <stdio.h>
 #include "ItemToPurchase.h"
 
-// Constants
-//
-// // Function Prototypes
-//
- // Main Function
+// Main Function
 int main()
 {
-    ItemToPurchase item1;
+    ItemToPurchase item1; // assign members
     ItemToPurchase item2;
+
     printf("Item 1\n");
     printf("Enter the item name:\n");
     fgets(item1.itemName, sizeof(item1.itemName), stdin);
+
     for(int i = 0; i < sizeof(item1.itemName); ++i)
     {
         if(item1.itemName[i] == '\n')
@@ -38,6 +36,7 @@ int main()
             item1.itemName[i] = '\0';
         }
     }
+
     printf("Enter the item price:\n");
     scanf(" %d", &item1.itemPrice);
     printf("Enter the item quantity:\n");
@@ -47,6 +46,7 @@ int main()
     printf("Item 2\n");
     printf("Enter the item name:\n");
     fgets(item2.itemName, sizeof(item2.itemName), stdin);
+
     for(int i = 0; i < sizeof(item2.itemName); ++i)
     {
         if(item2.itemName[i] == '\n')
@@ -54,17 +54,18 @@ int main()
             item2.itemName[i] = '\0';
         }
     }
+
     printf("Enter the item price:\n");
     scanf(" %d", &item2.itemPrice);
-    printf("Enter the item quantity:\n\n");
+    printf("Enter the item quantity:\n");
     scanf(" %d", &item2.itemQuantity);
-
-    printf("TOTAL COST\n");
+    printf("\nTOTAL COST\n");
     PrintItemCost(item1);
+    printf("\n");
     PrintItemCost(item2);
     printf("\n");
-    printf("Total: $%d\n", (item1.itemPrice * item1.itemQuantity) + (item2.itemPrice * item2.itemQuantity));
-
+    printf("\nTotal: $%d\n", (item1.itemPrice * item1.itemQuantity) + 
+            (item2.itemPrice * item2.itemQuantity));
 
     return 0;
 }

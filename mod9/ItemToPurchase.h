@@ -1,7 +1,7 @@
- #ifndef  ITEMTOPURCHASE__INC__
- #define  ITEMTOPURCHASE_INC__
+#ifndef  ITEMTOPURCHASE__INC__
+#define  ITEMTOPURCHASE_INC__
 
- typedef struct ItemToPurchase
+typedef struct ItemToPurchase
 {
     char itemName [50];
     char itemDescription [50];
