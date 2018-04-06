@@ -83,8 +83,8 @@ ContactNode* GetNextContact(ContactNode* thisNode)
  */
 void PrintContactNode(ContactNode* thisNode)
 {
-    printf("%s\n", thisNode->contactName);
-    printf("%s\n", thisNode->contactPhoneNum);
+    printf("Name: %s\n", thisNode->contactName);
+    printf("Phone number: %s\n", thisNode->contactPhoneNum);
     return;
 }
 
