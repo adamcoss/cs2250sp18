@@ -3,7 +3,7 @@
  *
  *       Filename:  Contacts.h
  *
- *    Description:  
+ *    Description:  Header file for Contacts, Main
  *
  *        Version:  1.0
  *        Created:  04/02/2018 10:59:05 PM
@@ -17,6 +17,10 @@
  */
 #ifndef  CONTACTS__INC__
 #define  CONTACTS_INC__
+
+#include <stdlib.h>
+#include <string.h>
+
 /*
  (2) Build the ContactNode struct per the following specifications:
  - Data members
@@ -31,6 +35,9 @@
    - Return location pointed by nextNodePtr
  - PrintContactNode()
 */
+
+// Structures
+
 typedef struct ContactNode
 {
     char contactName[50];
@@ -45,5 +52,5 @@ void CreateContactNode(ContactNode* thisNode, char name[], char num[],
 void InsertContactAfter(ContactNode* thisNode, ContactNode* newNode);
 ContactNode* GetNextContact(ContactNode* thisNode);
 void PrintContactNode(ContactNode* thisNode);
-#endif /* ----- #ifndef CONTACTS__INC__ ----- */
 
+#endif /* ----- #ifndef CONTACTS__INC__ ----- */

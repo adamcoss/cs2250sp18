@@ -17,12 +17,6 @@
  */
 #include <stdio.h>
 #include "Contacts.h"
-
-// Constants
-
-// Function Prototypes
-
-// Main Function
 /*
  (1) Create three files to submit.
  - Contacts.h - Struct definition, including the data members and
@@ -47,6 +41,8 @@
      nodes to build a linked list. (2 pts)
  (4) Output the linked list. (2 pts)
 */
+
+// Main Function
 int main()
 {
     ContactNode* headObj = NULL;
@@ -56,17 +52,55 @@ int main()
     int i = 0;
 
     headObj = (ContactNode*)malloc(sizeof(ContactNode));
+    currObj = (ContactNode*)malloc(sizeof(ContactNode));
+    lastObj = (ContactNode*)malloc(sizeof(ContactNode));
+    CreateContactNode(headObj, "", "", NULL);
 
-    for(i = 0; i<3, i++)
+    // Loop to get user inputs
+
+    for(i = 1; i<=3; i++)
     {
-        // Insert print statement and loop currobj malloc
-        //
-        // lastObj = currObj;
-        //
+        char name[50] = "";
+        char num[13] = "";
+        printf("Person %d\nEnter name:\n", i);
+        scanf(" %[^\n]s", name);
+        printf("Enter phone number:\n");
+        scanf(" %s", num);
+
+        switch (i)
+        {
+            case 1:
+                CreateContactNode( headObj, name, num, currObj);
+                printf("You entered: %s, %s\n\n", headObj->contactName, 
+                        headObj->contactPhoneNum);
+                break;
+            case 2:
+                CreateContactNode( currObj, name, num, lastObj);
+                printf("You entered: %s, %s\n\n", currObj->contactName, 
+                        currObj->contactPhoneNum);
+                break;
+            case 3:
+                CreateContactNode( lastObj, name, num, NULL);
+                printf("You entered: %s, %s\n\n", lastObj->contactName, 
+                        lastObj->contactPhoneNum);
+                break;
+        }
     }
+    // Print values of each node
+
+    printf("CONTACT LIST\n");
+    PrintContactNode(headObj);
+    printf("\n");
+    PrintContactNode(currObj);
+    printf("\n");
+    PrintContactNode(lastObj);
+    printf("\n");
+
+    // Free memory at the addresses
+
+    free(headObj);
+    free(currObj);
+    free(lastObj);
 
     return 0;
 }
-// Function Definitions
-
-

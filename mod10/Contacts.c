@@ -17,7 +17,6 @@
  */
 #include <stdio.h>
 #include "Contacts.h"
-#include <string.h>
 /*
  (2) Build the ContactNode struct per the following specifications:
  - Data members
@@ -32,8 +31,15 @@
    - Return location pointed by nextNodePtr
  - PrintContactNode()
  */
+
 // Function Definitions
 
+/*
+ * ===  FUNCTION  ======================================================================
+ *         Name:  CreateContactNode
+ *  Description:  Create a new contact
+ * =====================================================================================
+ */
 void CreateContactNode(ContactNode* thisNode, char name[], char num[],
         ContactNode* nextLoc)
 {
@@ -42,6 +48,13 @@ void CreateContactNode(ContactNode* thisNode, char name[], char num[],
     thisNode->nextNodePtr = nextLoc;
     return;
 }
+
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  InsertContactAfter
+ *  Description:  Insert a node after current node
+ * =====================================================================================
+ */
 void InsertContactAfter(ContactNode* thisNode, ContactNode* newNode)
 {
     ContactNode* tmpNext = NULL;
@@ -50,10 +63,24 @@ void InsertContactAfter(ContactNode* thisNode, ContactNode* newNode)
     newNode->nextNodePtr = tmpNext;
     return;
 }
+
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  GetNextContact
+ *  Description:  Find the values of the next node
+ * =====================================================================================
+ */
 ContactNode* GetNextContact(ContactNode* thisNode)
 {
     return thisNode->nextNodePtr;
 }
+
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  PrintContactNode
+ *  Description:  Prints the values in the structure of the node
+ * =====================================================================================
+ */
 void PrintContactNode(ContactNode* thisNode)
 {
     printf("%s\n", thisNode->contactName);
