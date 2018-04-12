@@ -128,8 +128,10 @@ int main()
     char col1[] = "";
     char col2[] = "";
     char dstr[] = "";
+    char dname[50][50];
     char* chr;
     int charCount = 0;
+    int count = 0;
     bool inputDone = false;
 
     printf("Enter a title for the data:\n");
@@ -151,7 +153,7 @@ int main()
     while(!inputDone)
     {
         fflush(stdin);
-        printf("Enter a data point(-1 to stop input):\n");
+        printf("Enter a data point (-1 to stop input):\n");
         fgets(dstr, 50, stdin);
         dstr[strlen(dstr) - 1] = '\0';
         // -1 to exit loop
@@ -180,17 +182,24 @@ int main()
                 charCount = 0;
                 continue;
             }
-            else
+            else if(charCount == 1)
             {
                 for(int j = 0; j < strlen(dstr); j++)
                 {
                     if((dstr[j] = ',') && ((isdigit(dstr[j + 1]) == 0) || 
                                 (isdigit(dstr[j + 2]) == 0))) 
                     {
+                        fflush(stdin);
                         printf("Error: Comma not followed by an integer.\n\n");
                         printf("Enter a valid data point:\n");
-                        fgets(dstr, 50, stdin);
+                        fgets(dstr, 100, stdin);
+                        dstr[strlen(dstr) - 1] = '\0';
                         continue;
+                    }
+                    else if((dstr[j] != ',') && (dstr[j] != ' '))
+                    {
+                        dname[count++][j] = dstr[j];
+                        // TODO Count data points
                     }
                 }
             }
@@ -202,9 +211,10 @@ int main()
         }
         inputDone = true;
     }
-    //printf("COL1: [%s]\n", col1);
+        printf("\n\t\t\t\tFORMATTED TABLE\n");
+            printf("%33s", title);
+                printf("%20s|%23s\n", col1, col2);
+                printf("--------------------------------------------\n");
     return 0;
 }
 // Function Definitions
-
-
