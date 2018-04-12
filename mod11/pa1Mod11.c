@@ -31,14 +31,11 @@ int main()
     char name[99] = "";
     char first[50] = "";
     char last[50] = "";
-//    char buffer[5] = "";
     char* str = NULL;
-//                    int count = 0;
     bool inputDone = false;
 
     while(!inputDone)
     {
-        printf("===WHILE LOOP===\n");
         printf("Enter input string:\n");
         fgets(name, 50, stdin);
         str = strrchr(name, ',');
@@ -46,7 +43,6 @@ int main()
         if(str == NULL)
         {
             printf("Error: No comma in string.\n\n");
-            printf("===(str == NULL)===\nstr = [%s]", str);
             continue;
         }
         int i = 0;
@@ -79,10 +75,6 @@ int main()
 
         inputDone = true;
     }
-
-
-        return 0;
+    return 0;
 }
 // Function Definitions
-
-
