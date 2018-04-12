@@ -144,16 +144,19 @@ int main()
     fgets(col2, 100, stdin);
     printf("You entered: %s\n", col2);
 
-        col1[strlen(col1) - 1] = '\0';
-        col2[strlen(col2) - 1] = '\0';
+    col1[strlen(col1) - 1] = '\0';
+    col2[strlen(col2) - 1] = '\0';
 
-// Take input
+    // Take input
     while(!inputDone)
     {
+        fflush(stdin);
         printf("Enter a data point(-1 to stop input):\n");
         fgets(dstr, 50, stdin);
+        dstr[strlen(dstr) - 1] = '\0';
         // -1 to exit loop
-        if(strcmp(dstr, "-1") == 0)
+        //if(strcmp(dstr, "-1") == 0)
+        if(strcmp(dstr, "-1"))
         {
             inputDone = true;
             // continue;
@@ -174,28 +177,34 @@ int main()
             if(charCount > 1)
             {
                 printf("Error: Too many commas in input.\n\n");
+                charCount = 0;
                 continue;
             }
-            for(int j = 0; j < strlen(dstr); j++)
+            else
             {
-                if((dstr[j] = ',') && ((isdigit(dstr[j + 1]) == 0) || 
-                        (isdigit(dstr[j + 2]) == 0))) 
+                for(int j = 0; j < strlen(dstr); j++)
                 {
-                    printf("Error: Comma not followed by an integer.\n\n");
-                    printf("Enter a valid data point:\n");
-                    fgets(dstr, 50, stdin);
+                    if((dstr[j] = ',') && ((isdigit(dstr[j + 1]) == 0) || 
+                                (isdigit(dstr[j + 2]) == 0))) 
+                    {
+                        printf("Error: Comma not followed by an integer.\n\n");
+                        printf("Enter a valid data point:\n");
+                        fgets(dstr, 50, stdin);
+                        continue;
+                    }
                 }
-
-
-
-                // fgets(dstr, 50, stdin);
             }
         }
-                inputDone = true;
+        else if(chr == NULL)
+        {
+            printf("Error: No comma in string.\n\n");
+            continue;
+        }
+        inputDone = true;
     }
-        printf("COL1: [%s]\n", col1);
-        return 0;
-    }
+    //printf("COL1: [%s]\n", col1);
+    return 0;
+}
 // Function Definitions
 
 
