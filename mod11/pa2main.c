@@ -17,6 +17,7 @@
  */
 #include <stdio.h> // For C
 #include <stdbool.h> // For C
+#include <stdlib.h> // For C
 #include <ctype.h> // For C
 #include <string.h> // For C
 //#include <iostream> // For C++
@@ -124,48 +125,103 @@
  */
 int main()
 {
-    char title[] = "";
-    char col1[] = "";
-    char col2[] = "";
-    char dstr[] = "";
+    char title[50] = "";    // User defined title of data
+    char col1[50] = "";   // User defined title of column 1
+    char col2[50] = "";   // User defined title of column 2
+
+    char dname[50][50];      // Array of user defined data points (string)
+    int dval[50];           // Array of user defined data points (int)
+    int dnum = 0;          // Counter to track number of entries
+
+    char dstr[50] = "";     // User defined string read from stdin
+    char str[50] = "";   // String portion of data point
+    char intstr[50] = "";         // Integer portion of data point as a string
+    int dataInt = 0;            // Integer portion of data point as an int
+
+    int errorFound = 0;         // Indicates if user input meets formatting requirements
+    char* subString = NULL;     // Char pointer used to decompose user input into string/int
+    int commaIndex = 0;         // Index used to decompose user input into string/int
+    int i = 0;                  // Loop counters
+    int j = 0;
+/*
+    char title[50] = "";
+    char col1[50] = "";
+    char col2[50] = "";
+
     char dname[50][50];
+    int dnum[20];
+    char dstr[50] = "";
+    char dval[10] = "";
+    int intFound = 0;
     char* chr;
     int charCount = 0;
     int count = 0;
     bool inputDone = false;
-
+*/
     printf("Enter a title for the data:\n");
     fgets(title, 50 , stdin);
+    title[strlen(title)-1] = '\0';
     printf("You entered: %s\n", title);
 
     printf("Enter the column 1 header:\n");
-    fgets(col1, 100, stdin);
+    fgets(col1, 50, stdin);
+    col1[strlen(col1)-1] = '\0';
     printf("You entered: %s\n", col1);
 
     printf("Enter the column 2 header:\n");
-    fgets(col2, 100, stdin);
+    fgets(col2, 50, stdin);
+    col2[strlen(col2)-1] = '\0';
     printf("You entered: %s\n", col2);
 
-    col1[strlen(col1) - 1] = '\0';
-    col2[strlen(col2) - 1] = '\0';
+    //    col1[strlen(col1) - 1] = '\0';
+    //    col2[strlen(col2) - 1] = '\0';
 
     // Take input
-    while(!inputDone)
+    while(strcmp(dstr, "-1") != 0)
     {
-        fflush(stdin);
+        errorFound = 0;
+        strcpy(dataString, "");
+                    strcpy(temp, "");
+
         printf("Enter a data point (-1 to stop input):\n");
         fgets(dstr, 50, stdin);
-        dstr[strlen(dstr) - 1] = '\0';
         // -1 to exit loop
         //if(strcmp(dstr, "-1") == 0)
-        if(strcmp(dstr, "-1"))
+        if(strcmp(dstr, "-1\n") || strcmp(dstr, "-1"))
         {
-            inputDone = true;
-            // continue;
             break;
         }
         // check for ',' in string
         chr = strchr(dstr, ',');
+        if(chr == NULL)
+        {
+            printf("Error: No comma in string.\n\n");
+            continue;
+        }
+        else
+        {
+            while(dstr[i] != ',')
+            {
+                str[i] = dstr[i];
+                str[i + 1] = '\0';
+                i++;
+            }
+            commaIndex = i;
+            while(dstr[i + 1] != '\0')
+            {
+                if(dstr[i + 1] == ',')
+                {
+                    // TODO May need to rethink this
+                    commaIndex = -1;
+                }
+                else
+                {
+                    // TODO If no comma, copy string
+                }
+
+            //TODO OLD WORK BELOW THIS LINE---------
+
+
         if(chr != NULL)             // if comma exists, start the loop to count
         {                           // number of commas.
             for(int i = 0; i < strlen(dstr); i++)
@@ -176,45 +232,80 @@ int main()
                 }
             }
             // if there are more than 1 comma, print error
-            if(charCount > 1)
+            int i = 0;
+            for(int j = 0; j < strlen(dstr); j++)
             {
-                printf("Error: Too many commas in input.\n\n");
-                charCount = 0;
-                continue;
-            }
-            else if(charCount == 1)
-            {
-                for(int j = 0; j < strlen(dstr); j++)
+                if((dstr[j] = ',') && (isdigit(dstr[j + 1]) != 0))
                 {
-                    if((dstr[j] = ',') && ((isdigit(dstr[j + 1]) == 0) || 
-                                (isdigit(dstr[j + 2]) == 0))) 
+                    while(dstr[j+1] != '\0')
                     {
-                        fflush(stdin);
-                        printf("Error: Comma not followed by an integer.\n\n");
-                        printf("Enter a valid data point:\n");
-                        fgets(dstr, 100, stdin);
-                        dstr[strlen(dstr) - 1] = '\0';
-                        continue;
-                    }
-                    else if((dstr[j] != ',') && (dstr[j] != ' '))
-                    {
-                        dname[count++][j] = dstr[j];
-                        // TODO Count data points
+                        dval[i] = dstr[j+1]; // store digit in dval array
+                        i++;
+                        j++;
                     }
                 }
+                else if((dstr[j] = ',') && (dstr[j+1] = ' ') && 
+                        (isdigit(dstr[j + 2]) != 0))
+                {
+                    while(dstr[j+2] != '\0')
+                    {
+                        dval[i] = dstr[j+2]; // store digit in dval array
+                        i++;
+                        j++;
+                    }
+                }
+                else
+                {
+                    intFound = 0;
+                }
+            }
+            int k = 0;
+            while((dstr[k] != ',') && (dstr[k] != ' '))
+            {
+                dname[count][k] = dstr[k];
+                // TODO Count data points
             }
         }
-        else if(chr == NULL)
+        if(charCount > 1)
         {
-            printf("Error: No comma in string.\n\n");
+            printf("Error: Too many commas in input.\n\n");
+            charCount = 0;
+        }
+        else if(intFound == 0)
+        {
+            fflush(stdin);
+            printf("Error: Comma not followed by an integer.\n\n");
+            printf("Enter a valid data point:\n");
+            fgets(dstr, 100, stdin);
+            dstr[strlen(dstr) - 1] = '\0';
             continue;
         }
-        inputDone = true;
+        else
+        {
+            dnum[count++] = atoi(dval);
+        }
     }
-        printf("\n\t\t\t\tFORMATTED TABLE\n");
-            printf("%33s", title);
-                printf("%20s|%23s\n", col1, col2);
-                printf("--------------------------------------------\n");
+    printf("\n\t\t\t\tFORMATTED TABLE\n");
+    printf("%33s", title);
+    printf("%20s|%23s\n", col1, col2);
+    printf("--------------------------------------------\n");
+    int i = 0;
+    while (i < count){
+        printf("%20s|%23d\n", dname[i] , dnum[i]);
+        i++;
+    }
+    printf("\n\t\t\t\tFORMATTER HISTOGRAM\n");
+    i = 0;
+    while (i < count){
+        printf("%20s", dname[i]);
+        int j= 0;
+        while (j  < dnum[i]){
+            printf("*");
+            j++;
+        }
+        printf("\n");
+        i++;
+    }
     return 0;
 }
 // Function Definitions
