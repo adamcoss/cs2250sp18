@@ -1,46 +1,37 @@
-/*
- * =====================================================================================
- *
- *       Filename:  ItemToPurchase.h
- *
- *    Description:  
- *
- *        Version:  1.0
- *        Created:  04/16/2018 04:26:00 PM
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  Adam Coss (), adamcoss@mail.weber.edu
- *   Organization:  WSU
- *
- * =====================================================================================
- */
-#ifndef  ITEMTOPURCHASE__INC__
-#define  ITEMTOPURCHASE_INC__
-#include <iostream> // For C++
-using namespace std; // For C++
-// Class
-class ItemToPurchase
+#ifndef ITEM_TO_PURCHASE_H
+#define ITEM_TO_PURCHASE_H
+
+
+#include <string>
+using namespace std;
+
+class ItemToPurchase 
 {
-    private:
-        string itemName;
-        int itemPrice;
-        int itemQuantity;
 
     public:
         ItemToPurchase();
+        ItemToPurchase(string name, string description, 
+                int price, int quantity = 1);
 
-        void SetName(string n);
-        string GetName();
+        void SetName(string name);
+        void SetDescription(string description);
+        void SetPrice(int price);
+        void SetQuantity(int quantity);
 
-        void SetPrice(int p);
-        int GetPrice();
+        string GetName() const;
+        string GetDescription() const;
+        int GetPrice() const;
+        int GetQuantity() const;
 
-        void SetQuantity(int q);
-        int GetQuantity();
+        void PrintItemCost();
+        void PrintItemDescription();
 
-        void ShowInfo() const;
-        int AddItems(int item1, int item2) const;
+    private:
+        string itemName;
+        string itemDescription;
+        int itemPrice;
+        int itemQuantity;
 };
 
-#endif /* ----- #ifndef ITEMTOPURCHASE__INC__ ----- */
+
+#endif
