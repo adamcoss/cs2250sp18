@@ -40,6 +40,7 @@ class ItemToPurchase
         int GetQuantity();
 
         void ShowInfo() const;
+        int AddItems(int item1, int item2) const;
 };
 
 #endif /* ----- #ifndef ITEMTOPURCHASE__INC__ ----- */

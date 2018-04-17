@@ -65,3 +65,9 @@ void ItemToPurchase::ShowInfo() const
 {
     cout<<this->itemName<<" "<<this->itemQuantity<<" @ $"<<this->itemPrice<<" = $"<<this->itemPrice * itemQuantity<<endl;
 }
+
+int ItemToPurchase::AddItems(int item1, int item2) const
+{
+    int total = item1 + item2;
+    return total;
+}

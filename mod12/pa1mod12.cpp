@@ -33,6 +33,7 @@ int main()
 
     ItemToPurchase item1;
     ItemToPurchase item2;
+    ItemToPurchase total;
 
     cout<<"Item 1"<<endl;
     cout<<"Enter the item name:"<<endl;
@@ -62,7 +63,9 @@ int main()
     item1.ShowInfo();
     item2.ShowInfo();
     cout<<endl;
-    cout<<"Total: $"<<(item1.GetPrice()*item1.GetQuantity()) + (item2.GetQuantity()*item2.GetPrice())<<endl;
+    cout<<"Total: $"<< ((item1.GetPrice()*item1.GetQuantity())+
+        (item2.GetPrice()*item2.GetQuantity()))<<endl;
+    //cout<<"Total: $"<< total.AddItems(item1.GetPrice(), item2.GetPrice())<<endl;
 
     return 0;
 }
