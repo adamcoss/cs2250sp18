@@ -37,7 +37,7 @@ int main()
 
     cout<<"Item 1"<<endl;
     cout<<"Enter the item name:"<<endl;
-    cin >> n;
+    getline(cin, n);
     item1.SetName(n);
     cout<<"Enter the item price:"<<endl;
     cin >> p;
@@ -50,7 +50,8 @@ int main()
     cin.ignore();
     cout<<"Item 2"<<endl;
     cout<<"Enter the item name:"<<endl;
-    cin >> n;
+    getline(cin, n);
+    //cin >> n;
     item2.SetName(n);
     cout<<"Enter the item price:"<<endl;
     cin >> p;
@@ -59,6 +60,7 @@ int main()
     cin >> q;
     item2.SetQuantity(q);
 
+    cout<<endl;
     cout<<"TOTAL COST"<<endl;
     item1.ShowInfo();
     item2.ShowInfo();
