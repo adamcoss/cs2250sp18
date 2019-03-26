@@ -281,3 +281,76 @@ git add .
 git status
 git commit
 exit
+ls
+ls -a
+pwd
+git init
+git origin master
+git --help
+git remote add origin https://github.com/adamcoss/cse100.git
+git add .
+git status
+git commit
+git congig --global --edit
+git config --global --edit
+git commit
+git add .
+git commit
+git commit -m "init"
+git push -u origin master
+git pull
+git pull https://github.com/adamcoss/cse100.git
+git status
+git pull master
+git pull origin
+git pull origin master
+git status
+ls
+git add cse100
+git commit -m "Added cse100"
+git add .
+git status
+cd cse100/
+ls
+git add .
+git status
+cd ..
+cd
+git push
+git push origin cse100
+git push origin master
+cd cse100/
+git add .
+git status
+cd mod2
+git add .
+git status
+git commit -m "added"
+ls
+git push
+git push .
+cd
+cd cse100/
+git remote add origin https://github.com/adamcoss/cse100.git
+git status
+git init
+git remote add origin https://github.com/adamcoss/cse100.git
+git commit -m "init commit"
+git add .
+git commit "added"
+git commit -m "added"
+git push -u origin master
+git add .
+git status
+cd mod2/
+git add .
+git status
+ls
+git commit -m "added"
+git add .
+git commit "added"
+git commit -m "added"
+ls
+cd ..
+ls
+exit
