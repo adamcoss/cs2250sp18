@@ -33,18 +33,20 @@
 		fTemp=78;
 
 # File marks:
-'0  1  0  ~/cse100/mod2/test.cpp
-'1  1  0  ~/cse100/test.c
-'2  7  0  ~/cse100/mod2/lab3q2.cpp
-'3  15  31  ~/cse100/mod2/lab3q2.cpp
-'4  9  47  ~/cse100/mod2/lab3q2.cpp
-'5  20  9  ~/cse100/mod2/lab3q2.cpp
-'6  13  0  ~/cse100/mod2/lab3q1.cpp
-'7  12  0  ~/cse100/mod2/lab3q1.cpp
-'8  1  0  ~/test.c
-'9  1  0  ~/mod8Main.c
+'0  1  0  ~/cse_100/test.c
+'1  1  0  ~/tes/test.c
+'2  1  0  ~/cse100/mod2/test.cpp
+'3  1  0  ~/cse100/test.c
+'4  7  0  ~/cse100/mod2/lab3q2.cpp
+'5  15  31  ~/cse100/mod2/lab3q2.cpp
+'6  9  47  ~/cse100/mod2/lab3q2.cpp
+'7  20  9  ~/cse100/mod2/lab3q2.cpp
+'8  13  0  ~/cse100/mod2/lab3q1.cpp
+'9  12  0  ~/cse100/mod2/lab3q1.cpp
 
 # Jumplist (newest first):
+-'  1  0  ~/cse_100/test.c
+-'  1  0  ~/tes/test.c
 -'  1  0  ~/cse100/mod2/test.cpp
 -'  1  0  ~/cse100/test.c
 -'  7  0  ~/cse100/mod2/lab3q2.cpp
@@ -141,10 +143,14 @@
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/test.c
--'  1  0  ~/mod8Main.c
--'  1  0  ~/mod8Main.c
 
 # History of marks within files (newest to oldest):
+
+> ~/cse_100/test.c
+	"	1	0
+
+> ~/tes/test.c
+	"	1	0
 
 > ~/cse100/mod2/test.cpp
 	"	1	0
