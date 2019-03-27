@@ -354,3 +354,106 @@ ls
 cd ..
 ls
 exit
+ls
+cd cse100/mod2
+ls
+ls -a
+git status
+rm .git
+ls .git
+cd .git
+ls
+cd ..
+ls
+cp .git git
+ls
+ls -a
+git add .
+git status
+git branch -u origin
+git branch -u origin/master
+git branch -u master
+git branch -u origin master
+git push -u
+git remote add https://github.com/adamcoss/cse100.git
+git status
+git push
+cd ..
+git status
+ls -a
+cd mod2/
+ls
+ls -a
+rm .git
+git rm .git
+rm -rf .git
+ls -a
+cd ..
+git commit -m "fixed mod2"
+git add .
+git commit -m "fixed mod2"
+git push
+vim test.c
+ls
+git add .
+git status
+cd mod2/
+vim test.cpp
+ls
+git status
+git add .
+ls -a
+cd ..
+git add .
+git status
+git commit -m " "
+git push
+git status
+git commit -m " "
+ls
+ls -a
+cd
+ls
+mkdir cse_100
+ls -a
+cd cse_100/
+cd
+git add .
+git status
+git commit -m " "
+git commit -m "x"
+git remote add origin https://github.com/adamcoss/cs2250sp18.git
+git push origin master
+ls
+git add .
+git status
+cd tes
+ls
+vim test.c
+cd
+git add .
+git status
+cd cse_100/
+vim test.c
+cd
+git add .
+git status
+git commit -m "x"
+git push
+git push origin master
+cd cse100
+ls
+cd mod2/
+ls
+cp lab3q1.cpp lab3q2.cpp lab3q2 /home/adamcoss/cse_100/
+cd
+cd cse_100/
+ls
+git commit -m "copied folders"
+git add .
+git commit -m "copied folders"
+git push
+git push origin master
+git help config
+git config --global user.email coss.adam@gmail.com
+exit

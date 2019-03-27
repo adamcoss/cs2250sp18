@@ -7,14 +7,54 @@
 
 # hlsearch on (H) or off (h):
 ~h
+# Last Search Pattern:
+~MSle0~/C++
+
+# Last Substitute String:
+$
+
 # Command Line History (newest to oldest):
+:q!
 :wq
-:qw
 :q
 :w
-:q!
+:colo perun
+:         perun.vim
+:colo delek
+:colo zellner
+:colo slate
+:colo ron
+:colo pablo
+:colo morning
+:colo industry
+:colo elflord
+:colo darkblue
+:colo torte
+:colo shine
+:colo peachpuff
+:colo murphy
+:colo koehler
+:colo evening
+:colo desert
+:colorscheme default
+:colo blue
+:x!
+:x
+:qw
 
 # Search String History (newest to oldest):
+?/C++
+?/CPP
+?/cpp
+?/C
+?/rr
+?/M
+?/MENU
+?/DOX_CMD
+? @$
+?/d	
+?/dox
+?/n
 
 # Expression History (newest to oldest):
 
@@ -23,28 +63,149 @@
 # Input Line History (newest to oldest):
 
 # Registers:
-""0	LINE	0
-		cout<<"Fahrenheit "<<fTemp<<"Celsius "<<cTemp<<endl;
-"1	LINE	0
+"0	CHAR	0
+	#include <iostream>
+	using namespace std;
+	int main()
+	{
 		
+	}
+"1	CHAR	0
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 "2	LINE	0
-		
+	set mouse=a
 "3	LINE	0
-		fTemp=78;
+	                                                                                  GoToDefinitionElseDeclaration<CR>
+"4	CHAR	0
+	                                                                          set
+	"                                                                          
+"5	CHAR	0
+	                                                                          set
+	"                                                                          
+"6	CHAR	0
+	Created:  03/26/2019 10:36:59 PM
+	 *       Revision:  none
+	 *       Compiler:  gcc
+	 *
+	 *         Author:  Adam Coss (), coss.adam@gmail.com
+	 *   Organization:  
+	 *
+	 * =====================================================================================
+	 */
+"7	LINE	0
+	 *       Compiler:  gcc
+"8	LINE	0
+	 *       Revision:  none
+"9	CHAR	0
+	#include <iostream>
+	using namespace std;
+	int main()
+	{
+		
+	}
+""-	CHAR	0
+	/
 
 # File marks:
-'0  1  0  ~/cse_100/test.c
-'1  1  0  ~/tes/test.c
-'2  1  0  ~/cse100/mod2/test.cpp
-'3  1  0  ~/cse100/test.c
-'4  7  0  ~/cse100/mod2/lab3q2.cpp
-'5  15  31  ~/cse100/mod2/lab3q2.cpp
-'6  9  47  ~/cse100/mod2/lab3q2.cpp
-'7  20  9  ~/cse100/mod2/lab3q2.cpp
-'8  13  0  ~/cse100/mod2/lab3q1.cpp
-'9  12  0  ~/cse100/mod2/lab3q1.cpp
+'0  18  0  ~/test1.cpp
+'1  9  0  ~/.vimrc
+'2  1  0  ~/test1.cpp
+'3  36  6  ~/test1.cpp
+'4  8  16  ~/.vimrc
+'5  96  35  ~/.vim/colors/perun.vim
+'6  19  0  ~/test1.cpp
+'7  33  4  ~/.vimrc
+'8  46  1  ~/.vimrc
+'9  6  20  ~/test1.cpp
 
 # Jumplist (newest first):
+-'  18  0  ~/test1.cpp
+-'  1  0  ~/test1.cpp
+-'  9  0  ~/.vimrc
+-'  1  0  ~/.vimrc
+-'  36  6  ~/test1.cpp
+-'  8  16  ~/.vimrc
+-'  96  35  ~/.vim/colors/perun.vim
+-'  1  0  ~/.vim/colors/perun.vim
+-'  19  0  ~/test1.cpp
+-'  33  4  ~/.vimrc
+-'  46  1  ~/.vimrc
+-'  6  20  ~/test1.cpp
+-'  99  35  ~/.vimrc
+-'  16  116  ~/.vimrc
+-'  26  143  ~/.vimrc
+-'  2  1  ~/.vimrc
+-'  9  10  ~/test.cpp
+-'  7  1  ~/test.cpp
+-'  1  0  ~/test.cpp
+-'  1  0  ~/.vim/c-support/templates/Templates
+-'  4  13  ~/test.cpp
+-'  18  0  ~/test.cpp
+-'  76  0  ~/.vim/c-support/templates/Templates
+-'  576  0  ~/.vim/c-support/templates/c.cpp.template
+-'  8  0  ~/.vim/c-support/doc
+-'  11  0  ~/.vim/c-support
+-'  1  0  ~/.vim/c-support/rc/customization.cpp.vim
+-'  425  0  ~/.vim/c-support/templates/doxygen.template
+-'  19  0  ~/.vim/c-support/doc
+-'  94  0  ~/.vim/c-support/templates/cpp.preprocessor.template
+-'  1  0  ~/.vim/c-support/templates/cpp.preprocessor.template
+-'  440  0  ~/.vim/c-support/templates/cpp.cpp.template
+-'  1  0  ~/.vim/c-support/templates/cpp.cpp.template
+-'  148  0  ~/.vim/c-support/templates/cpp.comments.template
+-'  6  21  ~/test.cpp
+-'  1  0  ~/test.c
+-'  6  19  ~/test.c
+-'  19  0  ~/test.c
 -'  1  0  ~/cse_100/test.c
 -'  1  0  ~/tes/test.c
 -'  1  0  ~/cse100/mod2/test.cpp
@@ -58,45 +219,18 @@
 -'  13  0  ~/cse100/mod2/lab3q1.cpp
 -'  1  0  ~/cse100/mod2/lab3q1.cpp
 -'  12  0  ~/cse100/mod2/lab3q1.cpp
--'  1  0  ~/test.c
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/mod8Main.c
--'  1  0  ~/test.c
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/mod8Main.c
--'  1  0  ~/test.c
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/mod8Main.c
--'  1  0  ~/test.c
--'  1  0  ~/mod8Main.c
--'  1  0  ~/mod8Main.c
--'  1  0  ~/mod8Main.c
--'  1  0  ~/mod8Main.c
--'  13  0  ~/cse100/mod2/lab3q1.cpp
--'  1  0  ~/cse100/mod2/lab3q1.cpp
--'  12  0  ~/cse100/mod2/lab3q1.cpp
--'  1  0  ~/test.c
--'  1  0  ~/mod8Main.c
--'  1  0  ~/mod8Main.c
--'  1  0  ~/mod8Main.c
--'  1  0  ~/mod8Main.c
--'  1  0  ~/test.c
--'  1  0  ~/mod8Main.c
--'  1  0  ~/mod8Main.c
--'  1  0  ~/mod8Main.c
--'  1  0  ~/mod8Main.c
--'  1  0  ~/test.c
--'  1  0  ~/mod8Main.c
--'  1  0  ~/mod8Main.c
--'  1  0  ~/mod8Main.c
--'  1  0  ~/mod8Main.c
--'  1  0  ~/test.c
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/mod8Main.c
@@ -104,22 +238,18 @@
 -'  13  0  ~/cse100/mod2/lab3q1.cpp
 -'  1  0  ~/cse100/mod2/lab3q1.cpp
 -'  12  0  ~/cse100/mod2/lab3q1.cpp
--'  1  0  ~/test.c
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/mod8Main.c
--'  1  0  ~/test.c
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/mod8Main.c
--'  1  0  ~/test.c
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/mod8Main.c
--'  1  0  ~/test.c
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/mod8Main.c
@@ -127,24 +257,287 @@
 -'  13  0  ~/cse100/mod2/lab3q1.cpp
 -'  1  0  ~/cse100/mod2/lab3q1.cpp
 -'  12  0  ~/cse100/mod2/lab3q1.cpp
--'  1  0  ~/test.c
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/mod8Main.c
--'  1  0  ~/test.c
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/mod8Main.c
 -'  1  0  ~/mod8Main.c
--'  1  0  ~/test.c
 -'  1  0  ~/mod8Main.c
--'  1  0  ~/mod8Main.c
--'  1  0  ~/mod8Main.c
--'  1  0  ~/mod8Main.c
--'  1  0  ~/test.c
 
 # History of marks within files (newest to oldest):
+
+> ~/test1.cpp
+	"	18	0
+	^	18	0
+	.	17	3
+	+	6	20
+	+	38	0
+	+	1	5
+	+	36	6
+	+	20	0
+	+	17	3
+
+> ~/.vimrc
+	"	9	0
+	^	9	1
+	.	9	1
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	74
+	+	2	74
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	1
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	71
+	+	2	0
+	+	2	58
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	59
+	+	2	59
+	+	2	1
+	+	2	3
+	+	2	0
+	+	2	0
+	+	2	3
+	+	2	0
+	+	102	0
+	+	2	24
+	+	4	11
+	+	2	0
+	+	7	0
+	+	6	0
+	+	7	20
+	+	102	0
+	+	11	19
+	+	101	0
+	+	101	0
+	+	26	27
+	+	16	11
+	+	16	11
+	+	20	0
+	+	19	3
+	+	18	0
+	+	20	0
+	+	26	0
+	+	25	0
+	+	22	0
+	+	34	26
+	+	38	0
+	+	34	0
+	+	46	0
+	+	45	0
+	+	44	0
+	+	43	0
+	+	40	0
+	+	49	0
+	+	48	0
+	+	58	0
+	+	57	0
+	+	54	0
+	+	51	0
+	+	66	6
+	+	76	22
+	+	68	0
+	+	72	0
+	+	73	0
+	+	75	0
+	+	76	0
+	+	83	0
+	+	80	0
+	+	79	0
+	+	100	63
+	+	85	0
+	+	86	0
+	+	89	0
+	+	90	0
+	+	93	0
+	+	94	0
+	+	95	0
+	+	96	0
+	+	99	0
+	+	100	0
+	+	99	36
+	+	45	0
+	+	46	2
+	+	102	0
+	+	33	4
+	+	7	21
+	+	8	17
+	+	9	1
+
+> ~/.vim/colors/perun.vim
+	"	96	35
+	^	96	36
+	.	96	35
+	+	96	36
+	+	1	1
+	+	3	0
+	+	4	0
+	+	5	0
+	+	6	0
+	+	7	0
+	+	8	0
+	+	9	0
+	+	10	0
+	+	11	0
+	+	12	0
+	+	13	0
+	+	14	0
+	+	15	0
+	+	16	0
+	+	17	0
+	+	18	0
+	+	19	0
+	+	20	0
+	+	21	0
+	+	22	0
+	+	23	0
+	+	24	0
+	+	25	0
+	+	26	0
+	+	27	0
+	+	28	0
+	+	29	0
+	+	30	0
+	+	31	0
+	+	32	0
+	+	33	0
+	+	34	0
+	+	35	0
+	+	36	0
+	+	37	0
+	+	38	0
+	+	39	0
+	+	40	0
+	+	41	0
+	+	42	0
+	+	43	0
+	+	44	0
+	+	45	0
+	+	46	0
+	+	47	0
+	+	48	0
+	+	49	0
+	+	50	0
+	+	51	0
+	+	52	0
+	+	53	0
+	+	54	0
+	+	55	0
+	+	56	0
+	+	57	0
+	+	58	0
+	+	59	0
+	+	60	0
+	+	61	0
+	+	62	0
+	+	63	0
+	+	64	0
+	+	65	0
+	+	66	0
+	+	67	0
+	+	68	0
+	+	69	0
+	+	70	0
+	+	71	0
+	+	72	0
+	+	73	0
+	+	74	0
+	+	75	0
+	+	76	0
+	+	77	0
+	+	78	0
+	+	79	0
+	+	80	0
+	+	81	0
+	+	82	0
+	+	83	0
+	+	84	0
+	+	85	0
+	+	86	0
+	+	87	0
+	+	88	0
+	+	89	0
+	+	90	0
+	+	91	0
+	+	92	0
+	+	93	0
+	+	94	0
+	+	95	0
+	+	96	35
+
+> ~/test.cpp
+	"	4	25
+	.	9	0
+	+	6	21
+	+	9	13
+	+	18	0
+	+	18	0
+	+	9	12
+	+	18	0
+	+	18	0
+	+	1	0
+	+	3	0
+	+	6	18
+	+	9	10
+	+	9	10
+	+	9	10
+	+	18	9
+	+	18	0
+	+	9	0
+	i	10	1
+
+> ~/.vim/c-support/templates/Templates
+	"	1	0
+	^	76	0
+	.	9	44
+	+	5	34
+	+	9	44
+
+> ~/.vim/c-support/templates/c.cpp.template
+	"	576	0
+
+> ~/.vim/c-support/rc/customization.cpp.vim
+	"	1	0
+
+> ~/.vim/c-support/templates/doxygen.template
+	"	425	0
+
+> ~/.vim/c-support/templates/cpp.preprocessor.template
+	"	94	0
+
+> ~/.vim/c-support/templates/cpp.cpp.template
+	"	440	0
+
+> ~/.vim/c-support/templates/cpp.comments.template
+	"	148	0
+
+> ~/test.c
+	"	1	0
+	^	6	20
+	.	6	0
+	+	19	17
+	+	6	0
 
 > ~/cse_100/test.c
 	"	1	0
@@ -201,12 +594,6 @@
 	+	11	0
 	+	13	0
 	+	14	0
-
-> ~/test.c
-	"	1	0
-	^	1	18
-	.	1	17
-	+	1	17
 
 > ~/mod8Main.c
 	"	1	0
