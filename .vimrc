@@ -3,10 +3,10 @@ filetype plugin on
 syntax enable
 set nofoldenable
 " Sweet colorscheme
-" colorscheme codeschool
-" set background=dark
-colorscheme perun
-"set termguicolors
+"colorscheme codeschool
+set background=dark
+colorscheme forest-night
+set termguicolors
 " Set utf8 as standard encoding and en_US as the standard language
  set encoding=utf-8
 "" Display line numbers on the left

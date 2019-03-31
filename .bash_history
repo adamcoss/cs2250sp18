@@ -457,3 +457,140 @@ git push origin master
 git help config
 git config --global user.email coss.adam@gmail.com
 exit
+ls
+cd cse100/mod2
+cd
+cd /usr/src
+wget http://www.vim.org/scripts/download_script.php?src_id=9679
+ls
+ls -a
+cd
+ls
+ls -a
+cd /usr/src
+ls
+ls -a
+wget http://www.vim.org/scripts/download_script.php?src_id=9679
+mkdir ~/.vim
+ls
+ls -a
+cd ~/.vim
+ls
+ls -a
+unzip /usr/src/cvim.zip
+sudo apt install unzip
+unzip /usr/src/cvim.zip
+wget http://www.vim.org/scripts/download_script.php?src_id=9679
+unzip /usr/src/cvim.zip
+cd /usr/src
+wget http://www.vim.org/scripts/download_script.php?src_id=9679
+cd ~/.vim
+ls
+ls -a
+open download_script.php\?src_id\=9679 
+cd
+ls
+cd ..
+ls
+ls -a
+pwd
+cd /usr/src
+ls
+ls -a
+wget https://www.vim.org/scripts/download_script.php?src_id=21803
+cd
+cd /mnt/c
+ls
+cd Users
+ls
+cd cossa/
+ls
+cd Downloads
+cp cvim.zip /usr/src
+cp cvim.zip ~/usr/src
+cp cvim.zip /usr/src
+sudo cp cvim.zip /usr/src
+cd /usr/src
+ls
+cd
+ls
+cd ~/.vim
+ls
+unzip /usr/src/cvim.zip 
+vim ~/.vimrc
+cd
+vim ~/.vimrc
+vim test.c
+rm test.c
+vim test.c
+vim ~/.vim/c-support/templates/Templates 
+vim test.c
+rm test.c
+vim test.cpp
+vim ~/.vim/c-support/templates/
+vim ~/.vim/c-support/templates/cpp.cpp.template 
+vim ~/.vim/c-support/templates/cpp.preprocessor.template 
+vim test.cpp
+vim ~/.vim/c-support/
+vim ~/.vim/c-support/templates/
+vim test.cpp
+vim ~/.vim/c-support/templates/
+vim test.cpp
+rm test.pp
+rm test.cpp
+~/.vimrc
+cd ~/.vimrc
+sudo ~/.vimrc
+vim ~/.vimrc
+vim test1.cpp
+vim ~/.vimrc
+vim test1.cpp
+vim ~/.vimrc
+vim test1.cpp
+cd
+ls -a
+cd ~/.vim
+ls
+ls -a
+cd ..
+ls -a
+cd ~/.vim/colors
+sudo ~/.vim/colors
+~/.vim/colors
+sudo ~/.vim/colors
+godsmack1
+cd ~/.vim/colors
+cd ..
+ls
+ls -a
+cd ~/.vim
+ls
+ls -a
+cd
+ls
+ls -a
+cd ~/.vim
+mkdir colors
+cd colors/
+vim perun.vim
+~/.vimrc
+sudo ~/.vimrc
+cd
+sudo ~/.vimrc
+~/.vimrc
+sudo ~/.vimrc
+sudo ~/.vim/.vimrc
+ls -a
+.vimrc
+vim ~/.vimrc
+vim test1.cpp
+vim ~/.vimrc
+vim test1.cpp
+vim ~/.vimrc
+vim test1.cpp
+git add
+git add .
+git commit -m "vim updates"
+git push
+git push origin master
+exit
