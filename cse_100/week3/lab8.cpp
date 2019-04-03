@@ -14,6 +14,12 @@
  *   Organization:  
  *
  * =====================================================================================
+ *
+ * ANSWERS TO QUESTIONS:
+ *    Expected      Observed
+ * 1) 1 3 5 7 9     1 3 5 7 9
+ * 2) 11            11
+ * 3) 0             0
  */
 #include<iostream>
 using  namespace std;
