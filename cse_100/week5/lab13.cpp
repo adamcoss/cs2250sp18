@@ -20,7 +20,7 @@ using namespace std;
 
 int main()
 {
-    // Variables
+    // Local variables
     int SIZE = 7, maxSnowId = 0;
     double sum = 0, avg = 0;
     int date[SIZE];
@@ -36,34 +36,39 @@ int main()
     cout << "Enter the date and corresponding snow fall." << endl;
     for(int i=0; i < SIZE; i++)
     {
-        cout << "Enter date:" << endl;
+        cout << "Enter date: ";
         cin >> date[i];
         while((date[i] < 1) || (date[i] > 31))
         {
-            cout << "Enter a valid date:" << endl;
+            cout << "Enter a valid date: ";
             cin >> date[i];
         }
-        cout << "Inches of snow fall on " << month << " " << date[i] <<":" << endl;
+        cout << "Inches of snow fall on " << month << " " << date[i] <<": ";
         cin >> snowFall[i];
     }
-    for(int i=0; i<SIZE; i++)
+
+    for(int i=0; i<SIZE-1; i++)                 // Sort arrays by date
     {
-    int count = i+1;
-    while((date[count-1] > date[count])&&(count<=SIZE)){
-         int tempdate, tempsnow;
-            tempdate = date[count];
-            tempsnow = snowFall[count];
-            date[count] = date[count-1];
-            snowFall[count] = snowFall[count-1];
-            date[count-1] = tempdate;
-            snowFall[count-1] = tempsnow;
-            count++;
+        int min, temp;
+        min = i;
+        for(int j=i+1; j<SIZE; j++)
+        {
+            if(date[j] < date[min])
+            {
+                min = j;
+            }
         }
+        temp = date[i];
+        date[i] = date[min];
+        date[min] = temp;
+        temp = snowFall[i];
+        snowFall[i] = snowFall[min];
+        snowFall[min] = temp;
     }
 
     for(int i=0; i<SIZE; i++)
     {                                           // Find average and max values
-        if(snowFall[i] > snowFall[maxSnowId])   // Find max snow
+        if(snowFall[i] > snowFall[maxSnowId])   // Find max snow fall
             maxSnowId = i;
         sum = sum + snowFall[i];                // Get sum for average
     }
@@ -71,16 +76,18 @@ int main()
     
     // Display results
     cout << endl;
-    cout << "\tSnow Fall Report for " << month << " " << date[0] << "-";
+    cout << "Snow Fall Report for " << month << " " << date[0] << "-";
     cout << date[SIZE-1] << endl;
     cout << "Date\t\tSnow Fall" << endl;
     cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
-    for(int i=0; i < SIZE; i++)
-    {
+    
+    for(int i=0; i < SIZE; i++)                 // Output dates and corresponding
+    {                                           // snowfall inches.
         cout << date[i] << "\t\t" << snowFall[i] << endl;
     }
-    cout << "Maximum snow fall of " << snowFall[maxSnowId] << " inches on ";
-    cout << month << " " << date[maxSnowId] << endl;
-    cout << "Average snow fall is " << avg << " inches." << endl;
+    
+    cout << "\nMaximum snow fall of " << snowFall[maxSnowId] << " inches on ";
+    cout << month << " " << date[maxSnowId] << "." << endl;
+    cout << "Average snow fall is " << avg << " inches.\n" << endl;
 }
 
